@@ -110,3 +110,9 @@ SELECT
     NULLIF(contact_no, '') AS ContactNumber,
     NULLIF(alt_contact_no, '') AS AlternativeContactNumber
 FROM Users;
+
+--sort(order_by)
+
+SELECT user_id, email, first_name, last_name, contact_no
+FROM Users
+ORDER BY last_name ASC, first_name ASC;
