@@ -101,3 +101,12 @@ WHERE user_id = 3;
 --truncate
 
 TRUNCATE TABLE tax;
+
+--nullif
+SELECT 
+    user_id,
+    email,
+    password_hash,
+    NULLIF(contact_no, '') AS ContactNumber,
+    NULLIF(alt_contact_no, '') AS AlternativeContactNumber
+FROM Users;
